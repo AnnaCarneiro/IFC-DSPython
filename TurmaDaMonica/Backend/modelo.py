@@ -34,19 +34,22 @@ if __name__ == "__main__":
 
     # teste da classe TurmaDaMonica
     t1 = TurmaDaMonica(nome = "Cebolinha", idade = "7", 
-        altura = "1,30", especialidade="Planos infalíveis")
+        altura = "1,23", especialidade="Planos infalíveis")
     t2 = TurmaDaMonica(nome = "Cascão", idade = "7", 
-        altura = "1,25", especialidade="Escapar da água")   
+        altura = "1,20", especialidade="Escapar da água")   
     t3 = TurmaDaMonica(nome = "Mônica", idade = "7", 
         altura = "1,10", especialidade="Dar coelhadas")     
     t4 = TurmaDaMonica(nome = "Magali", idade = "7", 
-        altura = "1,25", especialidade="Comer")
+        altura = "1,20", especialidade="Comer")
+    t5 = TurmaDaMonica(nome = "Franjinha", idade = "9", 
+        altura = "1,30", especialidade="Cientista")
     
     # persistir
     db.session.add(t1)
     db.session.add(t2)
     db.session.add(t3)
     db.session.add(t4)
+    db.session.add(t5)
     db.session.commit()
     
     # exibir a turminha
@@ -54,9 +57,11 @@ if __name__ == "__main__":
     print(t2)
     print(t3)
     print(t4)
+    print(t5)
     
     #exibir turminha json
     print(t1.json())
     print(t2.json())
     print(t3.json())
     print(t4.json())
+    print(t5.json())
